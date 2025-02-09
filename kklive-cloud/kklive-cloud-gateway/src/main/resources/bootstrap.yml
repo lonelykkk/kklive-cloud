@@ -21,3 +21,11 @@ spring:
             - Path=/web/**
           filters:
             - StripPrefix=1
+
+        - id: admin
+          uri: lb://kklive-cloud-admin
+          predicates:
+            - Path=/admin/**
+          filters:
+            - StripPrefix=1
+            - AdminFilter

@@ -20,6 +20,7 @@
         <module>kklive-cloud-interact</module>
         <module>kklive-cloud-resource</module>
         <module>kklive-cloud-web</module>
+        <module>kklive-cloud-admin</module>
     </modules>
 
     <properties>
