@@ -12,6 +12,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
         DataSourceAutoConfiguration.class,
         HibernateJpaAutoConfiguration.class,
         DataSourceTransactionManagerAutoConfiguration.class})
+@EnableFeignClients
 public class kkliveCloudAdminRunApplication {
     public static void main(String[] args) {
         SpringApplication.run(kkliveCloudAdminRunApplication.class, args);

@@ -21,6 +21,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
         HibernateJpaAutoConfiguration.class,
         DataSourceTransactionManagerAutoConfiguration.class
 })
+@EnableFeignClients
 public class kkliveCloudWebRunApplication {
     public static void main(String[] args) {
         SpringApplication.run(kkliveCloudWebRunApplication.class, args);
