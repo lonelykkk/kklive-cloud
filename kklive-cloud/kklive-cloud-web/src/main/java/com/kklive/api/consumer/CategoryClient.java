@@ -11,6 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @FeignClient(name = "kklive-cloud-admin")
 public interface CategoryClient {
-    @RequestMapping("/loadAllCategory")
+    @RequestMapping("/innerApi/loadAllCategory")
     public String loadAllCategory();
 }

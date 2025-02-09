@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @Version V1.0
  */
 @RestController
+@RequestMapping("innerApi")
 public class CategoryApi {
 
     @RequestMapping("/loadAllCategory")

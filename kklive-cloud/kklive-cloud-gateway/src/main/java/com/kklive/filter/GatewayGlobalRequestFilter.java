@@ -1,5 +1,7 @@
 package com.kklive.filter;
 
+import com.kklive.entity.enums.ResponseCodeEnum;
+import com.kklive.exception.BusinessException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
@@ -22,6 +24,10 @@ public class GatewayGlobalRequestFilter implements GlobalFilter, Ordered {
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         String rawPath = exchange.getRequest().getURI().getRawPath();
         log.info("请求的路径是：{}", rawPath);
+        // 不允许网关访问前缀innerApi的接口
+        if (rawPath.indexOf("innerApi") != -1) {
+            throw new BusinessException(ResponseCodeEnum.CODE_404);
+        }
         return chain.filter(exchange);
     }
 

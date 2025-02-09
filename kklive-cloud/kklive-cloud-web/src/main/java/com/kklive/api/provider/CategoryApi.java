@@ -14,6 +14,6 @@ public class CategoryApi {
 
     @RequestMapping("/loadAllCategory")
     public String loadAllCategory() {
-        return "这里是admin提供的分类接口";
+        return "这里是web提供的分类接口";
     }
 }
